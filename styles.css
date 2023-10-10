@@ -152,6 +152,7 @@ ul li{
 
 label[for="email"]{
     font-weight: bold;
+    font-size: .8em;
     color: var(--dark-slate-grey);
     display: block;
     margin-bottom: 5%;
@@ -182,10 +183,14 @@ button[type="submit"]{
 
 footer{
     color: var(--grey);
-    margin: 15% 5% 5% 5%;
-    line-height: 1.5em;
+    padding: 5%;
+    margin: 2%;
+    line-height: 2em;
+    font-size: .8em;
+
 }
 
 a:visited{
     color: var(--charcoal-grey);
+    
 }
