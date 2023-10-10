@@ -114,11 +114,78 @@ The designs were created to the following widths:
 */ 
 
 /* ---------------------------------- End of fonts, styles below -------------------------------- */ 
+/* Fallback fonts if the user's browser does not support */
 body{
-    font-family: 'Roboto';
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
+main{
+    padding: 5%;
+    margin: 2%;
+}
+/* Targets "Join 60,000 monthly..." */ 
+main p{
+    margin-bottom: 5%;
+    line-height: 1.5em;
+}
+/* Targets "Main h1" */ 
 h1{
     font-weight: bold;
+    font-size: 2.5em;
+    color: var(--dark-slate-grey);
+    margin-bottom: 5%;
 }
 
+/* Not used this before, but worked really well. Keeps the HTML minimal, content attribute is really useful */
+ul li::before{
+    content: url(assets/images/icon-list.svg);
+    padding-right: 5%;    
+}
+
+/* Targets list items and creates a flexbox container to align text together */ 
+ul li{
+    display: flex;
+    line-height: 1.5em;
+    margin-bottom: 5%;
+
+}
+
+label[for="email"]{
+    font-weight: bold;
+    color: var(--dark-slate-grey);
+    display: block;
+    margin-bottom: 5%;
+}
+
+input[type="email"]{
+    display: block;
+    padding: 5%;
+    margin-bottom: 5%;
+    width: 90%;
+    border: solid .05em var(--grey);
+    border-radius: .5em;
+}
+
+::placeholder{
+    color: var(--grey);
+}
+
+button[type="submit"]{
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--dark-slate-grey);
+    padding: 5%;
+    width: 100%;
+    border: solid .05em var(--grey);
+    border-radius: .5em;
+}
+
+footer{
+    color: var(--grey);
+    margin: 15% 5% 5% 5%;
+    line-height: 1.5em;
+}
+
+a:visited{
+    color: var(--charcoal-grey);
+}
