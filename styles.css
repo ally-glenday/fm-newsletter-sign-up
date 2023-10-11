@@ -149,12 +149,13 @@ ul li{
     margin-bottom: 5%;
 
 }
-
+/* Targets 'email address' label */ 
 label[for="email"]{
     font-weight: bold;
     font-size: .8em;
     color: var(--dark-slate-grey);
     display: block;
+    margin-top: 10%;
     margin-bottom: 5%;
 }
 
@@ -192,5 +193,21 @@ footer{
 
 a:visited{
     color: var(--charcoal-grey);
-    
 }
+
+a:hover, a:focus{
+    color: lightcoral;
+}
+
+a:active{
+    color: rgb(217, 94, 94)
+}
+
+/* ------------------------------------------ Media Queries --------------------------------------- */ 
+
+/* Tablets & screens over 420px */ 
+@media screen and (min-width: 420px) {
+    body{
+        color: red;
+    }
+} 
