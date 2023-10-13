@@ -43,6 +43,11 @@ function validateEmail (){
 // document.querySelector("form > p").style.fontSize = "1rem";
 // document.querySelector
 
+const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;  
+/* Create a variable to store user's input */ 
+let userInput = document.getElementById("user-input");
+const placeholder = document.querySelector("placeholder");
+
 const form = document.querySelector('form');
 const emailAlert = document.createElement("p");
 emailAlert.textContent = "Please enter a valid email address";
@@ -52,7 +57,9 @@ emailAlert.style.float = "right";
 emailAlert.style.fontSize = ".8rem";
 emailAlert.style.color = "#FF6257";
 
-
+userInput.style.backgroundColor = "#ffe8e6";
+userInput.style.border = "solid #FF6257 1px";
+userInput:placeholder.style.border = "solid #FF6257 1px";
 
 // const div = document.querySelector('div')
 // const newChild = document.createElement('p')
