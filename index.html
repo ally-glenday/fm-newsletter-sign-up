@@ -29,10 +29,12 @@
       <li>Measuring to ensure updates are a success</li>
       <li>And much more!</li>
     </ul>
-    <label for="email">Email address</label>
-    <input type="email" placeholder="email@company.com">
-    <button type="submit">Subscribe to monthly newsletter</button>
-  </main>
+    <form id="email-form" onsubmit="validateEmail()">
+      <label for="email">Email address</label>
+      <input id="user-input" type="email" placeholder="email@company.com">
+      <button type="submit">Subscribe to monthly newsletter</button>  
+    </form>
+  </main> 
 
   
 
@@ -53,5 +55,6 @@
       <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/ally-glenday">Ally Glenday</a>.</p> 
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
