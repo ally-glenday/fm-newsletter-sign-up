@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 /* This was a first for me, I usually use Google fonts but this was using a woff file and a link to the relative path. I used https://transfonter.org/ which I used on StackOverflow */ 
 
 /* ---------------------------------- End of CSS reset, fonts below -------------------------------- */ 
@@ -139,6 +143,7 @@ h1{
 /* Not used this before, but worked really well. Keeps the HTML minimal, content attribute is really useful */
 ul li::before{
     content: url(assets/images/icon-list.svg);
+    size: 100%;
     padding-right: 5%;    
 }
 
@@ -163,9 +168,9 @@ input[type="email"]{
     display: block;
     padding: 5%;
     margin-bottom: 5%;
-    width: 90%;
     border: solid .05em var(--grey);
     border-radius: .5em;
+    width: 100%;
 }
 
 ::placeholder{
@@ -203,11 +208,95 @@ a:active{
     color: rgb(217, 94, 94)
 }
 
+button:hover{
+    background: linear-gradient(40deg, #ff5377, Tomato);
+    cursor: pointer;
+}
+
 /* ------------------------------------------ Media Queries --------------------------------------- */ 
 
 /* Tablets & screens over 420px */ 
 @media screen and (min-width: 420px) {
-    body{
-        color: red;
+    picture img{
+        float: right;
+        max-width: 45vw;
+        
     }
+    input[type="email"]{
+        float: left;
+        width: 40vw;
+        padding: 2%;
+        margin-bottom: 2%;
+        
+    }
+
+    label[for="email"]{
+        margin: 1% 0;
+       
+    }
+    
+    button[type="submit"]{
+        width: 40vw;
+        padding: 2%;
+       
+    }
+
+    ul li{
+        margin: 3% 0 5% 0;
+    }
+
+    
 } 
+
+/* Tablets & screens over 1280px */ 
+@media screen and (min-width: 1280px) {
+   picture img{    
+        min-width: 50vw;
+        padding: 0 2%;
+   }
+
+   h1{
+        font-size: 4.5em;
+   }
+
+   main p, main ul, main li{
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+   }
+
+   main li{
+    padding: .5%;
+   }
+   main ul{
+    margin-bottom: 5%;
+    }
+
+   ::placeholder{
+    font-size: 1.2rem;
+    }
+
+    button[type="submit"]{
+        font-size: 1.2rem;
+       
+    }
+
+    h1 {
+        margin-bottom: 3%;
+    }
+    
+    body > main:nth-child(2) > p:nth-child(2) {
+        margin-bottom: 2%;
+        }
+
+
+
+
+
+
+
+} 
+
+
+
+
