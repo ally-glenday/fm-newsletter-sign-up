@@ -217,6 +217,16 @@ footer{
     margin-bottom: 5%;
 }
 
+input[type="email"]:invalid{
+    float: right;
+    font-size: .8rem;
+    color: "#FF6257";
+    font-weight: bold;
+
+
+}
+
+
 
 /* ------------------------------------------ Media Queries --------------------------------------- */ 
 
