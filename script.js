@@ -1,18 +1,92 @@
+// const validateEmail = (email) => {
+//         return email.match(
+//           /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+//         )
+//         ;
+
+       
+        
+//     }
+
+ 
+
+// function validateEmail(){
+//     const userInput = document.getElementById("user-input");
+//     const validRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    
+//     if(userInput.match(validRegex)){
+//         alert("True!");
+//     }
+//     else{
+//         alert("False!");
+//     }
+// }
+
+// validateEmail();
+
+
+
+function validateEmail(inputText) {
+    var inputText  =  document.getElementById("user-input");
+    var mailFormat =  /\S+@\S+\.\S+/;
+    if (inputText.value.match(mailFormat)) {
+      alert("Valid address!");
+      return true;
+    } else {
+      alert("Invalid address!");
+      return false;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
 // function successMessage(){
 //     alert("Success!");
 // }
 
-function validateEmail(){
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;  
-    /* Create a variable to store user's input */ 
-    var userInput = document.getElementById("user-input");
-    var placeholder = document.querySelector("placeholder");
+// var validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-    alert("hey");
+// function validateEmail(){
+ 
+    
+//     /* Create a variable to store user's input */ 
+//     var userInput = document.getElementById("user-input");
+//     // var placeholder = document.getElementById("placeholder");
 
+
+    
+//     if(userInput == validRegex){
+//         alert("Nice work!");
+//     }
+//     else{
+//         alert("Not valid I'm afraid");
+//     }
 
    
-}
+// }
+
+
+// const validateEmail = (email) => {
+//     return email.match(
+//       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+//     )
+//     ;
+
+//  function(){
+    
+//  }   
+
+
+
+
 
 // var form = document.getElementById('email-form');
 // var emailAlert = document.createElement("p");
