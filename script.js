@@ -50,16 +50,22 @@ const placeholder = document.querySelector("placeholder");
 
 const form = document.querySelector('form');
 const emailAlert = document.createElement("p");
-emailAlert.textContent = "Please enter a valid email address";
+emailAlert.textContent = "Valid email required";
 form.prepend(emailAlert);
 
+/* Alert message styling (Valid email required) */
 emailAlert.style.float = "right";
 emailAlert.style.fontSize = ".8rem";
 emailAlert.style.color = "#FF6257";
+emailAlert.style.fontWeight = "bold";
 
+/* Email address / user input styling */
 userInput.style.backgroundColor = "#ffe8e6";
 userInput.style.border = "solid #FF6257 1px";
 userInput:placeholder.style.border = "solid #FF6257 1px";
+
+
+
 
 // const div = document.querySelector('div')
 // const newChild = document.createElement('p')
