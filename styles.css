@@ -226,6 +226,35 @@ input[type="email"]:invalid{
 
 }
 
+#error-message{
+    float: right;
+    font-size: .8rem;
+    color: #FF6257;
+    font-weight: bold;
+   
+}
+
+.error-state{
+    background-color: #ffe8e6;
+    border: solid #FF6257 1px;
+}
+
+
+
+/* 
+
+   form.prepend(emailAlert);
+        emailAlert.style.float = "right";
+        emailAlert.style.fontSize = ".8rem";
+        emailAlert.style.color = "#FF6257";
+        emailAlert.style.fontWeight = "bold";
+    
+        
+        
+        userInput.style.backgroundColor = "#ffe8e6";
+        userInput.style.border = "solid #FF6257 1px"; 
+
+        */
 
 
 /* ------------------------------------------ Media Queries --------------------------------------- */ 
