@@ -32,13 +32,14 @@
 
     // var label = document.querySelector("label");
     var errorMessage = document.getElementById("error-message");
+    // var placeholder = document.querySelector("input:placeholder");
 
    
 
     
     if (userInput.value.match(mailFormat)){
-
-        errorMessage.textContent = "";
+        /* If input is valid, opens success window in the same tab (_self) window */
+        window.open("success.html", "_self"); 
          
 
     
@@ -49,6 +50,7 @@
     else if(userInput.value == ""){
         errorMessage.textContent = "Valid email required";
         userInput.classList.add("error-state");
+     
         
 
         
@@ -60,6 +62,8 @@
    
         errorMessage.textContent = "Valid email required";
         userInput.classList.add("error-state");
+        placeholder.style.border = "solid #FF6257 1px";
+        placeholder.style.color = "blue";
    
     
    
