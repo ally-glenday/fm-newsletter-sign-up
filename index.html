@@ -29,10 +29,13 @@
       <li>Measuring to ensure updates are a success</li>
       <li>And much more!</li>
     </ul>
-    <form onclick="validateEmail()" id="email-form">
-      <label for="email">Email address</label>
+    <form action="success.html">
+      <label for="email">Email address 
+        <p id="error-message"></p>
+      </label>
+  
       <input id="user-input" type="email" placeholder="email@company.com">
-      <button form="email-form" type="button">Subscribe to monthly newsletter</button>  
+      <button onclick="validateEmail()" form="email-form" type="button">Subscribe to monthly newsletter</button>  
     </form>
   </main> 
 

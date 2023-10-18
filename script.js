@@ -26,43 +26,50 @@
 // validateEmail();
 
 
-
-function validateEmail(userInput) {
+  function validateEmail(userInput) {
     var userInput  =  document.getElementById("user-input");
     var mailFormat =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    var form = document.getElementById('email-form');
-    var emailAlert = document.createElement("p");
+    // var label = document.querySelector("label");
+    var errorMessage = document.getElementById("error-message");
+
+   
 
     
     if (userInput.value.match(mailFormat)){
-        
-        emailAlert.textContent = "Nice!";
-        form.prepend(emailAlert); 
-      
-        
+
+        errorMessage.textContent = "";
+         
+
+    
         
     //   alert("Valid address!");
     
-    } else {
-    //   alert("Invalid address!");
+    } 
+    else if(userInput.value == ""){
+        errorMessage.textContent = "Valid email required";
+        userInput.classList.add("error-state");
         
 
-        emailAlert.textContent = "Valid email required";
-        form.prepend(emailAlert);
-        emailAlert.style.float = "right";
-        emailAlert.style.fontSize = ".8rem";
-        emailAlert.style.color = "#FF6257";
-        emailAlert.style.fontWeight = "bold";
+        
+     
+    }
     
+    else {
         
-        
-        userInput.style.backgroundColor = "#ffe8e6";
-        userInput.style.border = "solid #FF6257 1px"; 
+   
+        errorMessage.textContent = "Valid email required";
+        userInput.classList.add("error-state");
+   
+    
+   
+       
   
 
     }
   }
+
+  
 
 
 
