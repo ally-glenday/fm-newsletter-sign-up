@@ -27,18 +27,84 @@
 
 
 
-function validateEmail(inputText) {
-    var inputText  =  document.getElementById("user-input");
-    var mailFormat =  /\S+@\S+\.\S+/;
-    if (inputText.value.match(mailFormat)) {
-      alert("Valid address!");
-      return true;
+function validateEmail(userInput) {
+    var userInput  =  document.getElementById("user-input");
+    var mailFormat =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    var form = document.getElementById('email-form');
+    var emailAlert = document.createElement("p");
+
+
+    // emailAlert.style.float = "right";
+    //     emailAlert.style.fontSize = ".8rem";
+    //     emailAlert.style.color = "#FF6257";
+    //     emailAlert.style.fontWeight = "bold";
+    
+        
+        
+    //     userInput.style.backgroundColor = "#ffe8e6";
+    //     userInput.style.border = "solid #FF6257 1px";
+   
+   
+    
+    if (userInput.value.match(mailFormat)) {
+        
+        emailAlert.textContent = "Nice!";
+        form.prepend(emailAlert); 
+        
+        
+        
+    //   alert("Valid address!");
+    
     } else {
-      alert("Invalid address!");
-      return false;
+    //   alert("Invalid address!");
+  
+     emailAlert.textContent = "Valid email required";
+     form.prepend(emailAlert);
+     emailAlert.style.float = "right";
+     emailAlert.style.fontSize = ".8rem";
+     emailAlert.style.color = "#FF6257";
+     emailAlert.style.fontWeight = "bold";
+ 
+     
+     
+     userInput.style.backgroundColor = "#ffe8e6";
+     userInput.style.border = "solid #FF6257 1px"; 
+      
+     
     }
   }
 
+// var form = document.getElementById('email-form');
+// var emailAlert = document.createElement("p");
+// emailAlert.style.float = "right";
+// emailAlert.style.fontSize = ".8rem";
+// emailAlert.style.color = "#FF6257";
+// emailAlert.style.fontWeight = "bold";
+// emailAlert.textContent = "Valid email required";
+
+
+// userInput.style.backgroundColor = "#ffe8e6";
+// userInput.style.border = "solid #FF6257 1px";
+// placeholder.style.border = "solid #FF6257 1px";
+
+
+// form.prepend(emailAlert); 
+
+
+
+
+
+//   function validateEmail(inputText) {
+//     var mailFormat =  /\S+@\S+\.\S+/;
+//     if (inputText.value.match(mailFormat)) {
+//       alert("Valid address!");
+//       return true;
+//     } else {
+//       alert("Invalid address!");
+//       return false;
+//     }
+//   }
 
 
 
