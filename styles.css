@@ -177,7 +177,7 @@ input[type="email"]{
     color: var(--grey);
 }
 
-button[type="submit"]{
+button[type="button"]{
     font-weight: bold;
     color: var(--white);
     background-color: var(--dark-slate-grey);
@@ -249,7 +249,7 @@ input[type="email"]:invalid{
         margin: 1% 0;
     }
     
-    button[type="submit"]{
+    button[type="button"]{
         width: 40vw;
         padding: 5%;
        
@@ -294,7 +294,7 @@ input[type="email"]:invalid{
     font-size: 1.2rem;
     }
 
-    button[type="submit"]{
+    button[type="button"]{
         font-size: 1.2rem;
        
     }

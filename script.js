@@ -34,46 +34,43 @@ function validateEmail(userInput) {
     var form = document.getElementById('email-form');
     var emailAlert = document.createElement("p");
 
-
-    // emailAlert.style.float = "right";
-    //     emailAlert.style.fontSize = ".8rem";
-    //     emailAlert.style.color = "#FF6257";
-    //     emailAlert.style.fontWeight = "bold";
     
-        
-        
-    //     userInput.style.backgroundColor = "#ffe8e6";
-    //     userInput.style.border = "solid #FF6257 1px";
-   
-   
-    
-    if (userInput.value.match(mailFormat)) {
+    if (userInput.value.match(mailFormat)){
         
         emailAlert.textContent = "Nice!";
         form.prepend(emailAlert); 
-        
+      
         
         
     //   alert("Valid address!");
     
     } else {
     //   alert("Invalid address!");
+        
+
+        emailAlert.textContent = "Valid email required";
+        form.prepend(emailAlert);
+        emailAlert.style.float = "right";
+        emailAlert.style.fontSize = ".8rem";
+        emailAlert.style.color = "#FF6257";
+        emailAlert.style.fontWeight = "bold";
+    
+        
+        
+        userInput.style.backgroundColor = "#ffe8e6";
+        userInput.style.border = "solid #FF6257 1px"; 
   
-     emailAlert.textContent = "Valid email required";
-     form.prepend(emailAlert);
-     emailAlert.style.float = "right";
-     emailAlert.style.fontSize = ".8rem";
-     emailAlert.style.color = "#FF6257";
-     emailAlert.style.fontWeight = "bold";
- 
-     
-     
-     userInput.style.backgroundColor = "#ffe8e6";
-     userInput.style.border = "solid #FF6257 1px"; 
-      
-     
+
     }
   }
+
+
+
+
+
+
+
+  
 
 // var form = document.getElementById('email-form');
 // var emailAlert = document.createElement("p");
