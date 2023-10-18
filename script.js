@@ -30,6 +30,8 @@
     var userInput  =  document.getElementById("user-input");
     var mailFormat =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+
+
     // var label = document.querySelector("label");
     var errorMessage = document.getElementById("error-message");
     // var placeholder = document.querySelector("input:placeholder");
@@ -52,8 +54,6 @@
         userInput.classList.add("error-state");
      
         
-
-        
      
     }
     
@@ -65,16 +65,27 @@
         placeholder.style.border = "solid #FF6257 1px";
         placeholder.style.color = "blue";
    
-    
-   
-       
-  
 
     }
+
   }
 
-  
+// function displayUserInput(){
+//     userInput  =  document.getElementById("user-input");
+//     return(userInput.value);
 
+// }
+
+// displayUserInput();
+
+
+
+
+
+
+
+  
+  
 
 
 
