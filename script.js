@@ -21,7 +21,7 @@ function validateEmail(userInput) {
         }
         displayUserEmail();
         window.open("success.html", "_self");
-        document.getElementById("test").style.color = "blue";
+        document.getElementById("test").style.border = "5px solid blue";
 
         // var userEmail = console.log(userInput.value);
         // alert(userInput.value);
