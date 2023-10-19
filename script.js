@@ -12,19 +12,21 @@ function validateEmail(userInput) {
 
     if (userInput.value.match(mailFormat)) {
         /* If input is valid, opens success window in the same tab (_self) window */
-        window.open("success.html", "_self");
-
-        // var userEmail = console.log(userInput.value);
-        // alert(userInput.value);
-
         function displayUserEmail() {
-            document.getElementById("test").style.border = "5px solid blue";
+           
             console.log("test");
             // console.log(localStorage.getItem("emailAddress"));
 
             
         }
         displayUserEmail();
+        window.open("success.html", "_self");
+        document.getElementById("test").style.color = "blue";
+
+        // var userEmail = console.log(userInput.value);
+        // alert(userInput.value);
+
+     
 
     } else if (userInput.value == "") {
         errorMessage.textContent = "Valid email required";
