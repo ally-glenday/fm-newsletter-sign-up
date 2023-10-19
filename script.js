@@ -1,47 +1,41 @@
-// const validateEmail = (email) => {
-//         return email.match(
-//           /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-//         )
-//         ;
 
-       
-        
-//     }
-
- 
-
-// function validateEmail(){
-//     const userInput = document.getElementById("user-input");
-//     const validRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
-    
-//     if(userInput.match(validRegex)){
-//         alert("True!");
-//     }
-//     else{
-//         alert("False!");
-//     }
-// }
-
-// validateEmail();
 
 
   function validateEmail(userInput) {
     var userInput  =  document.getElementById("user-input");
     var mailFormat =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-
+  
+    localStorage.setItem("emailAddress", userInput);
+   
 
     // var label = document.querySelector("label");
     var errorMessage = document.getElementById("error-message");
     // var placeholder = document.querySelector("input:placeholder");
 
+  
+    
+
+
+ 
+
+
+
+  
    
 
     
     if (userInput.value.match(mailFormat)){
         /* If input is valid, opens success window in the same tab (_self) window */
         window.open("success.html", "_self"); 
+
+        // var userEmail = console.log(userInput.value);
+        // alert(userInput.value);
+
+
+
+
+        
+        
          
 
     
@@ -53,8 +47,6 @@
         errorMessage.textContent = "Valid email required";
         userInput.classList.add("error-state");
      
-        
-     
     }
     
     else {
@@ -62,21 +54,46 @@
    
         errorMessage.textContent = "Valid email required";
         userInput.classList.add("error-state");
-        placeholder.style.border = "solid #FF6257 1px";
-        placeholder.style.color = "blue";
+       
    
 
     }
 
+
+ 
+
+   
+  
+
   }
 
-// function displayUserInput(){
-//     userInput  =  document.getElementById("user-input");
-//     return(userInput.value);
+//   var blue = document.getElementById("display-user-input");
 
-// }
 
-// displayUserInput();
+
+
+function displayUserEmail(){
+    var userInput = document.getElementById("user-input");
+
+    console.log(userInput.value);
+    window.onload()
+    
+}
+
+// window.onload = function(){
+//     var name = prompt("What's your name?");
+//     var lengthOfName = name.length
+
+//     document.getElementById('output').innerHTML = lengthOfName;
+// };
+
+// displayUserEmail();
+
+  
+
+ 
+
+
 
 
 

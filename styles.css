@@ -177,7 +177,7 @@ input{
     color: var(--grey);
 }
 
-button[type="button"]{
+button[type="button"], button{
     font-weight: bold;
     color: var(--white);
     background-color: var(--dark-slate-grey);
@@ -186,6 +186,8 @@ button[type="button"]{
     border: solid .05em var(--grey);
     border-radius: .5em;
 }
+
+
 
 footer{
     color: var(--grey);
@@ -196,15 +198,15 @@ footer{
 
 }
 
-a:visited{
+footer a:visited{
     color: var(--charcoal-grey);
 }
 
-a:hover, a:focus{
+footer a:hover, footer a:focus{
     color: lightcoral;
 }
 
-a:active{
+footer a:active{
     color: rgb(217, 94, 94)
 }
 
@@ -233,10 +235,20 @@ footer{
     
 }
 
+
 .success img{
     margin: 40% 0 10% 0;
 }
 
+#display-user-input{
+    font-weight: bold;
+}
+
+.dismiss-message{
+    color: var(--white);
+    text-decoration: none;
+    margin-top: 10rem;
+}
 
 /* 
 
@@ -288,6 +300,17 @@ footer{
     form{
         max-width: 40vw;
     }
+    .success{
+        max-width: 50vw;
+        max-height: 50vh;
+        margin: 0 auto;
+        
+    }
+
+    .success a{
+        font-size: 1.2rem;
+    }
+
 
     
 } 
@@ -340,6 +363,11 @@ footer{
 
     label[for="email"]{
         margin: 3% 0;
+    }
+
+
+    .success img{
+        margin: 5% 0 10% 0;
     }
 
 
