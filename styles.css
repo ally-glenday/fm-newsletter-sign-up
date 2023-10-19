@@ -248,6 +248,11 @@ footer{
     color: var(--white);
     text-decoration: none;
     margin-top: 10rem;
+
+}
+
+.dismiss-message a{
+    size: 100%;
 }
 
 /* 
