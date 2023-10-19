@@ -1,83 +1,54 @@
+function validateEmail(userInput) {
+    var userInput = document.getElementById("user-input");
+    var mailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-
-
-  function validateEmail(userInput) {
-    var userInput  =  document.getElementById("user-input");
-    var mailFormat =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  
+    /* Saves user's email in local storage */
     localStorage.setItem("emailAddress", userInput.value);
-
-    
-
-
-   
 
     // var label = document.querySelector("label");
     var errorMessage = document.getElementById("error-message");
     // var placeholder = document.querySelector("input:placeholder");
 
-  
-  
-    
 
-
- 
-
-
-
-  
-   
-
-    
-    if (userInput.value.match(mailFormat)){
+    if (userInput.value.match(mailFormat)) {
         /* If input is valid, opens success window in the same tab (_self) window */
-        window.open("success.html", "_self"); 
+        window.open("success.html", "_self");
 
         // var userEmail = console.log(userInput.value);
         // alert(userInput.value);
 
-        function displayUserEmail(){
-            console.log(localStorage.getItem("emailAddress"));
-            
+        function displayUserEmail() {
+            document.getElementById("test").style.border = "5px solid blue";
+            console.log("test");
+            // console.log(localStorage.getItem("emailAddress"));
+
             
         }
-        
         displayUserEmail();
-    
 
-
-        
-        
-         
-
-    
-        
-    //   alert("Valid address!");
-    
-    } 
-    else if(userInput.value == ""){
+    } else if (userInput.value == "") {
         errorMessage.textContent = "Valid email required";
         userInput.classList.add("error-state");
-     
-    }
-    
-    else {
-        
-   
+    } else {
         errorMessage.textContent = "Valid email required";
         userInput.classList.add("error-state");
-       
-   
-
     }
 
 
- 
 
-   
-  
+}
 
-  }
+
+
+
+
+
+
+
+
+
+
+
 
 //   var blue = document.getElementById("display-user-input");
 
@@ -94,9 +65,6 @@
 
 // displayUserEmail();
 
-  
-
- 
 
 
 
@@ -106,15 +74,18 @@
 
 
 
-  
-  
 
 
 
 
 
 
-  
+
+
+
+
+
+
 
 // var form = document.getElementById('email-form');
 // var emailAlert = document.createElement("p");
@@ -162,14 +133,14 @@
 // var validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 // function validateEmail(){
- 
-    
+
+
 //     /* Create a variable to store user's input */ 
 //     var userInput = document.getElementById("user-input");
 //     // var placeholder = document.getElementById("placeholder");
 
 
-    
+
 //     if(userInput == validRegex){
 //         alert("Nice work!");
 //     }
@@ -177,7 +148,7 @@
 //         alert("Not valid I'm afraid");
 //     }
 
-   
+
 // }
 
 
@@ -188,7 +159,7 @@
 //     ;
 
 //  function(){
-    
+
 //  }   
 
 
@@ -214,7 +185,7 @@
 
 
 
-/* Function to validate email using regular expression */ 
+/* Function to validate email using regular expression */
 // function validateEmail(){
 
 //     do{
@@ -226,11 +197,11 @@
 //         form.prepend(emailAlert); 
 //         return false;
 //     }
-    
+
 //     while(userInput !== validRegex || userInput == "");
-    
-    
-   
+
+
+
 
 // function ValidateEmail(mail) 
 // {
@@ -256,17 +227,17 @@
 /* 
 
  /* Alert message styling (Valid email required) */
-    // emailAlert.style.float = "right";
-    // emailAlert.style.fontSize = ".8rem";
-    // emailAlert.style.color = "#FF6257";
-    // emailAlert.style.fontWeight = "bold";
+// emailAlert.style.float = "right";
+// emailAlert.style.fontSize = ".8rem";
+// emailAlert.style.color = "#FF6257";
+// emailAlert.style.fontWeight = "bold";
 
-    
-    
-    /* Email address / user input styling */
-    // userInput.style.backgroundColor = "#ffe8e6";
-    // userInput.style.border = "solid #FF6257 1px";
-    // placeholder.style.border = "solid #FF6257 1px";
+
+
+/* Email address / user input styling */
+// userInput.style.backgroundColor = "#ffe8e6";
+// userInput.style.border = "solid #FF6257 1px";
+// placeholder.style.border = "solid #FF6257 1px";
 
 
 
@@ -298,8 +269,3 @@
 
 
 // */
-
-
-
-
-
