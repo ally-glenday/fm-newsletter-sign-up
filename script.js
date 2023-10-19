@@ -16,12 +16,16 @@ function validateEmail(userInput) {
            
             console.log("test");
             // console.log(localStorage.getItem("emailAddress"));
+            
+
+            
 
             
         }
         displayUserEmail();
         window.open("success.html", "_self");
         document.getElementById("test").style.border = "5px solid blue";
+       
 
         // var userEmail = console.log(userInput.value);
         // alert(userInput.value);
@@ -36,7 +40,7 @@ function validateEmail(userInput) {
         userInput.classList.add("error-state");
     }
 
-
+  
 
 }
 
