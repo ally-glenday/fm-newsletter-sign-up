@@ -5,13 +5,18 @@
     var userInput  =  document.getElementById("user-input");
     var mailFormat =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   
-    localStorage.setItem("emailAddress", userInput);
+    localStorage.setItem("emailAddress", userInput.value);
+
+    
+
+
    
 
     // var label = document.querySelector("label");
     var errorMessage = document.getElementById("error-message");
     // var placeholder = document.querySelector("input:placeholder");
 
+  
   
     
 
@@ -31,7 +36,14 @@
         // var userEmail = console.log(userInput.value);
         // alert(userInput.value);
 
-
+        function displayUserEmail(){
+            console.log(localStorage.getItem("emailAddress"));
+            
+            
+        }
+        
+        displayUserEmail();
+    
 
 
         
@@ -72,13 +84,6 @@
 
 
 
-function displayUserEmail(){
-    var userInput = document.getElementById("user-input");
-
-    console.log(userInput.value);
-    window.onload()
-    
-}
 
 // window.onload = function(){
 //     var name = prompt("What's your name?");
