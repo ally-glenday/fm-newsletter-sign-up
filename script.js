@@ -1,37 +1,18 @@
-function validateEmail(userInput) {
-    var userInput = document.getElementById("user-input");
-    var mailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const userInput = document.getElementById("user-input");
+const mailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   /* Saves user's email in local storage */
+const emailAddress = localStorage.setItem("emailAddress", userInput.value);
+const errorMessage = document.getElementById("error-message");
 
-    /* Saves user's email in local storage */
-    localStorage.setItem("emailAddress", userInput.value);
+const spanUserInput = document.getElementById("display-user-input");
 
-    // var label = document.querySelector("label");
-    var errorMessage = document.getElementById("error-message");
-    // var placeholder = document.querySelector("input:placeholder");
+spanUserInput.addEventListener("DOMContentLoaded", displayPage);
 
 
+function validateEmail() {
     if (userInput.value.match(mailFormat)) {
         /* If input is valid, opens success window in the same tab (_self) window */
-        function displayUserEmail() {
-           
-            console.log("test");
-            // console.log(localStorage.getItem("emailAddress"));
-            
-
-            
-
-            
-        }
-        displayUserEmail();
         window.open("success.html", "_self");
-        document.getElementById("test").style.border = "5px solid blue";
-       
-
-        // var userEmail = console.log(userInput.value);
-        // alert(userInput.value);
-
-     
-
     } else if (userInput.value == "") {
         errorMessage.textContent = "Valid email required";
         userInput.classList.add("error-state");
@@ -40,13 +21,47 @@ function validateEmail(userInput) {
         userInput.classList.add("error-state");
     }
 
-  
-
 }
 
 
 
+// subscribeButton.addEventListener("click", displayPage);
 
+
+
+// const subscribeButton = document.getElementById("subscribe-Button"); //get elements from site to use in script
+// const inputField = document.getElementById("input-field");
+
+
+function displayPage() {
+    let displayElement = document.getElementById("display-user-input"); // display inputed adress email
+    const userEmailAddress =  displayElement.value;
+  
+    displayElement.textContent = userEmailAddress;
+  }
+
+
+
+  
+//   const subscribeButton = document.getElementById("subscribe-Button"); //get elements from site to use in script
+//   const inputField = document.getElementById("input-field");
+  
+//   subscribeButton.addEventListener("click", validate);
+//   subscribeButton.addEventListener("click", displayPage);
+
+//   function displayPage() {
+//     let displayElement = document.getElementById("displayEmail"); // display inputed adress email
+//     const inputValue = inputField.value;
+  
+//     displayElement.textContent = inputValue;
+//   }
+        
+      
+        // document.getElementById("test").style.border = "5px solid blue";
+       
+
+        // var userEmail = console.log(userInput.value);
+        // alert(userInput.value);
 
 
 
