@@ -29,17 +29,45 @@
       <li>Measuring to ensure updates are a success</li>
       <li>And much more!</li>
     </ul>
-    <form action="success.html" type="email">
-      <label for="email">Email address 
+    <form id="email-form">
+      <label for="user-input">
+        Email address 
         <p id="error-message"></p>
       </label>
-  
-      <input id="user-input" type="email" placeholder="email@company.com">
-      <button onclick="validateEmail()" form="email-form" type="button">Subscribe to monthly newsletter</button>  
+    
+      <input 
+        id="user-input" 
+        name="email"
+        type="email" 
+        placeholder="email@company.com"
+        required
+      >
+    
+      <!-- NO onclick -->
+      <!-- NO form attribute -->
+      <!-- MUST be submit -->
+      <button type="submit">
+        Subscribe to monthly newsletter
+      </button>
     </form>
   </main> 
 
-  
+
+<!-- My original form-->
+<!-- <form action="success.html" type="email">
+  <label for="email">Email address 
+    <p id="error-message"></p>
+  </label>
+
+  <input id="user-input" type="email" placeholder="email@company.com">
+  <button onclick="validateEmail()" form="email-form" type="button">Subscribe to monthly newsletter</button>  
+</form> -->
+
+
+
+
+
+
 
   <!-- Sign-up form end -->
 

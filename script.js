@@ -1,46 +1,92 @@
-const userInput = document.getElementById("user-input");
-const mailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   /* Saves user's email in local storage */
-const emailAddress = localStorage.setItem("emailAddress", userInput.value);
-const errorMessage = document.getElementById("error-message");
+document.addEventListener("DOMContentLoaded", function () {
 
-const spanUserInput = document.getElementById("display-user-input");
-
-spanUserInput.addEventListener("DOMContentLoaded", displayPage);
-
-
-function validateEmail() {
-    if (userInput.value.match(mailFormat)) {
-        /* If input is valid, opens success window in the same tab (_self) window */
-        window.open("success.html", "_self");
-    } else if (userInput.value == "") {
-        errorMessage.textContent = "Valid email required";
-        userInput.classList.add("error-state");
-    } else {
-        errorMessage.textContent = "Valid email required";
-        userInput.classList.add("error-state");
-    }
-
-}
-
-
-
-// subscribeButton.addEventListener("click", displayPage);
-
-
-
-// const subscribeButton = document.getElementById("subscribe-Button"); //get elements from site to use in script
-// const inputField = document.getElementById("input-field");
-
-
-function displayPage() {
-    let displayElement = document.getElementById("display-user-input"); // display inputed adress email
-    const userEmailAddress =  displayElement.value;
+    // ===============================
+    // FORM PAGE LOGIC (index.html)
+    // ===============================
   
-    displayElement.textContent = userEmailAddress;
-  }
+    const form = document.getElementById("email-form");
+  
+    if (form) {
+  
+      const userInput = document.getElementById("user-input");
+      const errorMessage = document.getElementById("error-message");
+  
+      form.addEventListener("submit", function (event) {
+  
+        event.preventDefault();
+  
+        const mailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+        if (mailFormat.test(userInput.value)) {
+  
+          localStorage.setItem("emailAddress", userInput.value);
+  
+          console.log("Saved:", userInput.value);
+  
+          window.location.href = "success.html";
+  
+        } else {
+          errorMessage.textContent = "Valid email required";
+          userInput.classList.add("error-state");
+        }
+  
+      });
+    }
+  
+    // ===============================
+    // SUCCESS PAGE LOGIC
+    // ===============================
+  
+    const spanUserInput = document.getElementById("display-user-input");
+  
+    if (spanUserInput) {
+  
+      const savedEmail = localStorage.getItem("emailAddress");
+  
+      console.log("Loaded:", savedEmail);
+  
+      spanUserInput.textContent = savedEmail;
+  
+    }
+  
+  });
+
+  /*----------------------------------------*/
+
+/* My original script */ 
 
 
+
+// const userInput = document.getElementById("user-input");
+// const mailFormat = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//    /* Saves user's email in local storage */
+// const emailAddress = localStorage.setItem("emailAddress", userInput.value);
+// const errorMessage = document.getElementById("error-message");
+
+// const spanUserInput = document.getElementById("display-user-input");
+
+// spanUserInput.addEventListener("DOMContentLoaded", displayPage);
+// spanUserInput.innerHTML = localStorage.getItem("emailAddress");
+
+
+
+// function validateEmail() {
+//     if (userInput.value.match(mailFormat)) {
+//         /* If input is valid, opens success window in the same tab (_self) window */
+//         window.open("success.html", "_self");
+//     } else if (userInput.value == "") {
+//         errorMessage.textContent = "Valid email required";
+//         userInput.classList.add("error-state");
+//     } else {
+//         errorMessage.textContent = "Valid email required";
+//         userInput.classList.add("error-state");
+//     }
+
+// }
+
+
+
+/*------------------------------*/ 
 
   
 //   const subscribeButton = document.getElementById("subscribe-Button"); //get elements from site to use in script
